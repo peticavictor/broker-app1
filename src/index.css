@@ -5,9 +5,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-family: 'Didot' !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  overflow-y: hidden;
+}
+.outer-wrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display:none;
+}
+
+.item {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appearing-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.first-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://images.unsplash.com/photo-1694683167694-ef444f2fff9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80);
+  background-size: cover;
+}
+
+.second-page {
+  width: 100vw;
+  height: 100vh;
+}
+
+.rotate {
+  transform: rotate(-90deg) translate(-50%, 0);
+  transform-origin: left top;
+  padding-top: 15px;
+}
+
+.link {
+  text-decoration: none !important;
+  color: black !important;
+  padding: 20px;
+}
+
+.link:hover {
+  border-bottom: 1px solid;
+  transition: 1s;
+}
+
+.horisontal-rule {
+  margin-top: 0;
 }
